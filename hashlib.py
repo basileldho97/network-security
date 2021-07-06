@@ -8,13 +8,10 @@ Original file is located at
 """
 
 import hashlib
+hash_object = hashlib.sha224(b'Hello World')
+hash_object = hashlib.sha256(b'Hello World')
+hash_object = hashlib.sha384(b'Hello World')
+hex_dig = hash_object.hexdigest()
+print(hex_dig)
 
-m = hashlib.sha256()
-m.update(b"Nobody inspects")
-m.update(b" the spammish repetition")
-m.digest()
 
-m.digest_size
-32
-m.block_size
-64
